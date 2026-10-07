@@ -3,6 +3,8 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // GitHub Pages serves the site from /<repo>/, so the build sets VITE_BASE.
+  base: process.env.VITE_BASE ?? '/',
   plugins: [react()],
   server: {
     // Honour PORT so a second instance can run alongside the first. The bridge

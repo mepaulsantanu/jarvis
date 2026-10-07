@@ -998,7 +998,7 @@ const wss = new WebSocketServer({
     done(true)
   },
 })
-server.listen(PORT)
+server.listen(PORT, '127.0.0.1')
 
 console.log(`[jarvis] bridge listening on ws://localhost:${PORT}`)
 console.log(
